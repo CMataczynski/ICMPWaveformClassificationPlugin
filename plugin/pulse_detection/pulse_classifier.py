@@ -44,6 +44,7 @@ class Classifier:
             data = self.preprocess(pulse_inp[idp])
             pulses.append(data)
             if len(pulses) % self.batch_size == self.batch_size - 1:
+                pulses = np.array(pulses)
                 tensors = torch.tensor(pulses, dtype=torch.float).to(self.device)
                 tensors = tensors.unsqueeze(1)
                 outputs = self.model(tensors).detach().cpu().tolist()
@@ -55,6 +56,7 @@ class Classifier:
                 predictions += outputs
                 pulses = []
         if len(pulses) > 0:
+            pulses = np.array(pulses)
             tensors = torch.tensor(pulses, dtype=torch.float).to(self.device)
             tensors = tensors.unsqueeze(1)
             outputs = self.model(tensors).detach().cpu().tolist()
