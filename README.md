@@ -1,5 +1,6 @@
 # ICMPWaveformClassificationPlugin
-ICP Pulse Waveform Classification Plugin for ICM+.
+ICP Pulse Waveform Classification Plugin (from [End-to-End Automatic Morphological Classification of Intracranial Pressure Pulse Waveforms Using Deep Learning](https://ieeexplore.ieee.org/document/9453152)) for ICM+.
+
 # Installation
 1. Install ICM+ Version that supports Python scripting.
 2. Install [Anaconda](https://www.anaconda.com/) 
@@ -36,3 +37,17 @@ C:\Users\<user>\anaconda3\envs\ICMPlugin\
 7. You can use the Plugin for calculations within the ICM+.
 It provides a function called PyClassifyWaveforms that takes ICP signal as an argument.
 We recommend setting the calculations to 300 second window with 60 second stride (or 10 seconds for improved resolution. This however will result in slower computation speed).
+
+# Cite this work
+```
+@article{mataczynski2021end,
+  title={End-to-end automatic morphological classification of intracranial pressure pulse waveforms using deep learning},
+  author={Mataczy{\'n}ski, Cyprian and Kazimierska, Agnieszka and Uryga, Agnieszka and Burzy{\'n}ska, Ma{\l}gorzata and Rusiecki, Andrzej and Kasprowicz, Magdalena},
+  journal={IEEE Journal of Biomedical and Health Informatics},
+  volume={26},
+  number={2},
+  pages={494--504},
+  year={2021},
+  publisher={IEEE}
+}
+```
