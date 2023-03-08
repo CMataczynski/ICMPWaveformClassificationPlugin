@@ -35,4 +35,4 @@ C:\Users\<user>\anaconda3\envs\ICMPlugin\
 ```
 7. You can use the Plugin for calculations within the ICM+.
 It provides a function called PyClassifyWaveforms that takes ICP signal as an argument.
-We recommend setting the calculations to 300 second window with 60 second stride.
+We recommend setting the calculations to 300 second window with 60 second stride (or 10 seconds for improved resolution. This however will result in slower computation speed).
