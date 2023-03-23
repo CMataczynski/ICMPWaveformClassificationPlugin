@@ -57,8 +57,8 @@ class ClassifyWaveforms:
         classes = np.argmax(classes, axis=1)
         uniq, cnt = np.unique(classes, return_counts=True)
 
-        uniq = uniq[uniq != 4]
         cnt = cnt[uniq != 4]
+        uniq = uniq[uniq != 4]
         cnt = cnt / cnt.sum()
         
         psi = 0
