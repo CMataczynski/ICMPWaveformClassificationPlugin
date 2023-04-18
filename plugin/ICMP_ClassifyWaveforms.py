@@ -48,6 +48,9 @@ class ClassifyWaveforms:
         # my_own_code_here
         sig1= np.array(sig1)
         sig1 = sig1[(~np.isnan(sig1))]
+        if len(sig1) > 1:
+            return np.nan
+        
         ts_time_seconds = ts_time * 1e-3
         time_step = 1 / self.sampling_freq
         time_vector = ts_time_seconds + time_step * np.arange(len(sig1))
