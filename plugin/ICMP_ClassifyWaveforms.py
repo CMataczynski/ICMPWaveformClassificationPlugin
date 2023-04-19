@@ -48,25 +48,33 @@ class ClassifyWaveforms:
         # my_own_code_here
         sig1= np.array(sig1)
         sig1 = sig1[(~np.isnan(sig1))]
+        
+        #Check if signal contains at least 2 non nan values
         if len(sig1) > 1:
             return np.nan
         
+        #Specify time vector for the signal
         ts_time_seconds = ts_time * 1e-3
         time_step = 1 / self.sampling_freq
         time_vector = ts_time_seconds + time_step * np.arange(len(sig1))
         
-
+        #Process the signal extracting waveforms
         classes, _ = self.processing_pipeline.process_signal(sig1, time_vector)
         classes = np.argmax(classes, axis=1)
         uniq, cnt = np.unique(classes, return_counts=True)
 
+        #Remove the artifacts and check whether anything's left
         cnt = cnt[uniq != 4]
         uniq = uniq[uniq != 4]
+        if len(cnt) == 0 or cnt.sum() == 0:
+            return np.nan
+        
+        #Scale counts
         cnt = cnt / cnt.sum()
         
-        psi = 0
+        #Compute PSI
+        psi = 0 
         for cls, cnt in zip(uniq, cnt):
             psi += (cls+1) * cnt
-        
 
         return psi
