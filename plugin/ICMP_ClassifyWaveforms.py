@@ -50,7 +50,7 @@ class ClassifyWaveforms:
         sig1 = sig1[(~np.isnan(sig1))]
         
         #Check if signal contains at least 2 non nan values
-        if len(sig1) > 1:
+        if len(sig1) <= 1:
             return np.nan
         
         #Specify time vector for the signal
