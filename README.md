@@ -1,6 +1,16 @@
 # ICMPWaveformClassificationPlugin
 ICP Pulse Waveform Classification Plugin (from [End-to-End Automatic Morphological Classification of Intracranial Pressure Pulse Waveforms Using Deep Learning](https://ieeexplore.ieee.org/document/9453152)) for ICM+.
 
+# Expected performance
+
+The plugin's speed was tested on different length of files. The testing platform was equipped with Nvidia 3070Ti GPU, Ryzen 5600x CPU, 16 Gb of RAM and tested under ICM+ version 9.1. All of the results are of only PSI computation with 300 second window and 10 second stride.
+| File length | ICP sampling frequency | Processing time |
+| ----------- | ---------------------- | --------------- |
+| 34 min | 240 Hz | 31s |
+| 1hr 35min | 240 Hz | 2min 13s |
+| 1hr 42min | 30 Hz | 1m 17s |
+
+
 # Installation
 1. Install ICM+ Version that supports Python scripting.
 2. Install [Anaconda](https://www.anaconda.com/) 
