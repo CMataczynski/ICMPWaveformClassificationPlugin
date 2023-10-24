@@ -8,6 +8,7 @@ The plugin's speed was tested on different length of files. The testing platform
 | ----------- | ---------------------- | --------------- |
 | 34 min | 240 Hz | 31s |
 | 1hr 35min | 240 Hz | 2min 13s |
+| 7hr 16min | 200 Hz | 5m 37s |
 | 1hr 42min | 30 Hz | 1m 17s |
 
 
