@@ -51,6 +51,17 @@ We recommend setting the calculations to 300 second window with 60 second stride
 
 # Cite this work
 ```
+@article{kazimierska2023relationship,
+  title={Relationship between the shape of intracranial pressure pulse waveform and computed tomography characteristics in patients after traumatic brain injury},
+  author={Kazimierska, Agnieszka and Uryga, Agnieszka and Mataczy{\'n}ski, Cyprian and Czosnyka, Marek and Lang, Erhard W and Kasprowicz, Magdalena},
+  journal={Critical Care},
+  volume={27},
+  number={1},
+  pages={447},
+  year={2023},
+  publisher={Springer}
+}
+
 @article{mataczynski2021end,
   title={End-to-end automatic morphological classification of intracranial pressure pulse waveforms using deep learning},
   author={Mataczy{\'n}ski, Cyprian and Kazimierska, Agnieszka and Uryga, Agnieszka and Burzy{\'n}ska, Ma{\l}gorzata and Rusiecki, Andrzej and Kasprowicz, Magdalena},
